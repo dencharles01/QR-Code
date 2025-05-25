@@ -1,31 +1,75 @@
-# Front-end Style Guide
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-## Layout
+body {
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  background-color: hsl(212, 45%, 89%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
 
-The designs were created to the following widths:
+/* Container centres content */
+.container {
+  width: 100%;
+  max-width: 375px;
+}
 
-- Mobile: 375px
-- Desktop: 1440px
+/* Card Styles */
+.card {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
 
-> 💡 These are just the design sizes. Ensure content is responsive and meets WCAG requirements by testing the full range of screen sizes from 320px to large screens.
+/* QR Image */
+.qr-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
 
-## Colors
+/* Heading */
+.card h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: hsl(218, 44%, 22%);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
 
-- White: hsl(0, 0%, 100%)
+/* Paragraph */
+.card p {
+  font-weight: 400;
+  color: hsl(216, 15%, 48%);
+  line-height: 1.5;
+}
 
-- Slate 300: hsl(212, 45%, 89%)
-- Slate 500: hsl(216, 15%, 48%)
-- Slate 900: hsl(218, 44%, 22%)
+/* Larger screens: add subtle scaling */
+@media (min-width: 768px) {
+  .container {
+    max-width: 360px;
+  }
 
-## Typography
+  .card {
+    padding: 2rem;
+  }
 
-### Body Copy
+  .card h1 {
+    font-size: 1.5rem;
+  }
 
-- Font size (paragraph): 15px
-
-### Font
-
-- Family: [Outfit](https://fonts.google.com/specimen/Outfit)
-- Weights: 400, 700
-
-> 💎 This is a free+ challenge. So, if you want to see all the design details and practice working with professional tools like Figma, you can download the design file from where you downloaded the starter code.
+  .card p {
+    font-size: 1rem;
+  }
+}
